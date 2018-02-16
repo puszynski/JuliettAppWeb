@@ -3,13 +3,51 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>TypeScript HTML App</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>JuliettApp v.09.1</title>
+
+    <meta name="description" content="Simple web application for fitness exercises" />
+    <meta name="keywords" content="JuliettApp, fitness, exercises, cycles" />
+
+
     <link rel="stylesheet" href="app.css" type="text/css" />
+    <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css" />
     <script src="app.js"></script>
 </head>
-<body>
-    <h1>TypeScript HTML App</h1>
+<body onload="odliczanie();">
+    <div id="container">
+        <div class="rectangle">
+            <div id="zegar">12:00:00</div>
+            <div style="clear: both;"></div>
+        </div>
 
-    <div id="content"></div>
+        <div class="square">
+
+            <div class="tile1" id="startTimer" onclick="start();"><i class="icon-play"></i><br /></div>
+            <div class="tile1" id="stopTimer" onclick="stopTimer();"><i class="icon-pause"></i><br /></div>
+
+            <div style="clear:both;"></div>
+
+            <div class="tile2" onclick="reset();"><i class="icon-to-start-alt">  </i><br /></div>
+            <a target="_blank" href="https://www.youtube.com/watch?v=O6yWsZBG1s8" class="tilelink"> <div class="tile3"><i class="icon-note-beamed"></i><br /></div></a>
+
+            <div style="clear:both;"></div>
+            
+        </div>
+
+
+        <div class="square">
+            <div class="tile5">
+                <span id="timeBlock">00:00</span><br />   <!-- span - warp small portions of text, images -->
+                <span id="comment">Cycles info</span>
+            </div>
+
+            <div style="clear:both;"></div>
+        </div>
+
+        <div style="clear: both;"></div>
+        <div class="rectangle">2018 &copy; puszynski.pl - JulietApp v.09.1. </div>
+    </div>
 </body>
 </html>
